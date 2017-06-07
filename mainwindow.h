@@ -2,6 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QPixmap>
+#include <QPainter>
 
 namespace Ui {
 class MainWindow;
@@ -13,6 +15,10 @@ class MainWindow : public QMainWindow
 
 public:
     explicit MainWindow(QWidget *parent = 0);
+
+    // Elementos usados para dibujar
+    QPixmap *pix;
+    QPainter* paint;
     ~MainWindow();
 
 private:

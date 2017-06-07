@@ -3,14 +3,16 @@
 #include <QPixmap>
 #include <QPainter>
 #include <QColor>
+#include <qmath.h>
 
 drawing::drawing()
 {
 
 }
 
-void drawing::lineBresenham(QPainter *canvas, QPointF *p1, QPointF *p2, int width, QColor color)
+void drawing::lineBresenham(QPainter *canvas, QPointF *p1, QPointF *p2, int width, QColor color, int alpha)
 {
+    color.setAlpha(alpha);
     QPen pen(color,width,Qt::SolidLine);
     canvas->setPen(pen);
 
@@ -127,10 +129,11 @@ void drawing::triangle(QPainter* canvas, QPointF *p1, QPointF *p2, QPointF *p3, 
 
 void drawing::triangle(QPainter *canvas, QPointF *p, int angle, int length, int width, QColor color)
 {
-    wingA = rotate(p,angle+30,length);
-    wingB = rotate(p,angle-30,length);
-
-    triangle(canvas, p, wingA, wingB, width, color);
+    //QPointF wingA, wingB;
+    //wingA = rotate(p,angle+30,length);
+    //wingB = rotate(p,angle-30,length);
+    //
+    //triangle(canvas, p, wingA, wingB, width, color);
 }
 
 void drawing::lineBresenhamWithAngle(QPainter* canvas, QPointF *posicion_actual, int angle, int length, int width, QColor color)

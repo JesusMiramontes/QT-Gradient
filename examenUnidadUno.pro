@@ -25,9 +25,11 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    drawing.cpp
+    drawing.cpp \
+    square.cpp
 
 HEADERS  += mainwindow.h \
-    drawing.h
+    drawing.h \
+    square.h
 
 FORMS    += mainwindow.ui

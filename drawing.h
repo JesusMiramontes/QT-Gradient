@@ -11,7 +11,7 @@ public:
     drawing();
 
     // Lines
-    static void lineBresenham(QPainter* canvas, QPointF* p1, QPointF* p2, int width=3, QColor color=Qt::green);
+    static void lineBresenham(QPainter* canvas, QPointF* p1, QPointF* p2, int width=3, QColor color=Qt::green, int alpha=255);
     static void lineDDA(QPainter* canvas, QPointF* p1, QPointF* p2, int width=3, QColor color = Qt::green);
     static void lineBresenhamWithAngle(QPainter* canvas, QPointF* posicion_actual, int angle, int length=100, int width=3, QColor color = Qt::green);
 
