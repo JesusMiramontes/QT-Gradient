@@ -6,12 +6,19 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>775</width>
-    <height>479</height>
+    <width>781</width>
+    <height>524</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow{background-color: rgb(0, 0, 0);}
+QWidget{background-color: rgb(0, 0, 0);}
+QLabel{color:rgb(255,0,0);}
+QPushButton{color:rgb(255,255,255);background-color:rgb(16,15,17)}
+QLineEdit{color:rgb(255, 0, 0);}</string>
   </property>
   <widget class="QWidget" name="centralWidget">
    <widget class="QLabel" name="drawing_area">
@@ -20,24 +27,70 @@
       <x>0</x>
       <y>0</y>
       <width>781</width>
-      <height>471</height>
+      <height>481</height>
      </rect>
     </property>
     <property name="frameShape">
      <enum>QFrame::Box</enum>
     </property>
     <property name="text">
-     <string>TextLabel</string>
+     <string/>
     </property>
    </widget>
-  </widget>
-  <widget class="QToolBar" name="mainToolBar">
-   <attribute name="toolBarArea">
-    <enum>TopToolBarArea</enum>
-   </attribute>
-   <attribute name="toolBarBreak">
-    <bool>false</bool>
-   </attribute>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>490</y>
+      <width>669</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;José de Jesús Miramontes Gómez - #15131349&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QPushButton" name="btnDibujar">
+         <property name="text">
+          <string>Dibujar gradiente</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnCuadro">
+         <property name="text">
+          <string>Cuadro por cuadro</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnColumna">
+         <property name="text">
+          <string>Columna por columna</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnColor">
+         <property name="text">
+          <string>Elegir color</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+   <zorder>drawing_area</zorder>
+   <zorder>layoutWidget</zorder>
+   <zorder>label</zorder>
   </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
