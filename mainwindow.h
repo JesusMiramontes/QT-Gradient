@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include <QPixmap>
 #include <QPainter>
+#include "square.h"
 
 namespace Ui {
 class MainWindow;
@@ -19,6 +20,12 @@ public:
     // Elementos usados para dibujar
     QPixmap *pix;
     QPainter* paint;
+
+    void drawSquare(square* s);
+    void drawList();
+    void autoGeneraCuadros();
+
+    QList<square*> cuadros;
     ~MainWindow();
 
 private:

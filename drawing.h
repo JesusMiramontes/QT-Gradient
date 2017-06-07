@@ -4,6 +4,7 @@
 #include <QPixmap>
 #include <QPainter>
 #include <QColor>
+#include "square.h"
 
 class drawing
 {
@@ -24,6 +25,7 @@ public:
 
     // Square
     static void square(QPainter* canvas, QPointF* p1, QPointF* p2, QPointF* p3, QPointF* p4, int width=3, QColor color = Qt::green);
+    //static void drawSquare(QPainter *canvas, square* s);
 
     static QPointF* rotate(QPointF* posicion_actual, int angle, int length=3);
 };
